@@ -55,18 +55,3 @@ body {
   border-bottom-right-radius: 8px;
   background-color: #f4f5f7;
 }
-
-.task {
-  margin-bottom: 0.5rem;
-  &__info{
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 1.6rem;
-    color: #686565;
-  }
-  &__description{
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 1.6rem;
-  }
-}
