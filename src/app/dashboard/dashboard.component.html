@@ -1,13 +1,10 @@
 <div class="card business-context">
+<div class="business-context__bar">
   <div class="business-context__title">
     <h4>BUSINESS CONTEXT</h4>
   </div>
-  <div class="form-group">
-    <label for="search-text">Search Text</label>
-    <input type="text" class="form-control" id="search-text" aria-describedby="search-text"
-           [(ngModel)]="searchText" placeholder="Search task"
-           autofocus>
-  </div>
+    <app-search-task (searchEvent)=setSearchText($event)></app-search-task>
+</div>
   <div class="business-context__content">
     <div class="tasks">
       <ng-container *ngIf="(tasks$ | async) as tasks">

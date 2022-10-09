@@ -6,6 +6,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from "@angular/forms";
+import { SearchTaskComponent } from './search-task/search-task.component';
 
 
 
@@ -13,7 +14,8 @@ import { FormsModule } from "@angular/forms";
   declarations: [
     TaskComponent,
     DashboardComponent,
-    FilterPipe
+    FilterPipe,
+    SearchTaskComponent
   ],
   imports: [
     CommonModule,

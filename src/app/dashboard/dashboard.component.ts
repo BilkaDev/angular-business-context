@@ -19,4 +19,8 @@ export class DashboardComponent implements OnInit {
   public ngOnInit(): void {
     this.tasks$ = this.taskService.fetchTasks();
   }
+
+  setSearchText(e : string){
+    this.searchText = e
+  }
 }
