@@ -1,9 +1,11 @@
 <div class="card task">
   <div class="task__info">
-    <p>{{wo_id}}</p>
-    <p>{{assigned_to}}</p>
+    <p>{{work_order_id}}</p>
+
     <p>•</p>
     <p> {{received_date}} </p>
+    <p *ngFor="let item of assigned_to"
+    >{{item.person_name}}</p>
     <p> {{status}}</p>
   </div>
   <div class="task__description">
