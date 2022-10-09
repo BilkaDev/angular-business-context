@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Assigned } from "./task";
 
 @Component({
   selector: "app-task",
@@ -12,12 +13,9 @@ export class TaskComponent {
   @Input()
   public description!: string;
   @Input()
-  public received_date!: string;
+  public received_date!: Date;
   @Input()
-  public assigned_to!: {
-  "person_name": string;
-  "status": string;
-}[]  | [];
+  public assigned_to!: Assigned;
   @Input()
   public status!: string;
   @Input()
