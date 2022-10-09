@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f5f7;
+}
+
+.business-context {
+  margin: 30px auto;
+  width: 700px;
+  &__title {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    color: #DC008F;
+    border-bottom: 1px solid #DC008F;
+    h4 {
+      line-height: 3.5rem;
+      border-bottom: 2px solid #DC008F;
+    }
+  }
+  &__content {
+    padding: 0.5rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.26);
+}
+
+
+.tasks {
+  width: 100%;
+  padding: 1rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #f4f5f7;
+}
+
+.task {
+  margin-bottom: 0.5rem;
+  &__info{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+    color: #686565;
+  }
+  &__description{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+  }
+}
