@@ -1,14 +1,112 @@
 .task {
   margin-bottom: 0.5rem;
-  &__info{
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 1.6rem;
-    color: #686565;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+
+  &__assigned {
+    .assigned-boxes {
+      display: flex;
+      justify-content: flex-end;
+
+      .assigned-item {
+        &__name {
+          margin-bottom: 0.2rem;
+          height: 2.2rem;
+          width: 2.2rem;
+          line-height: 2.2rem;
+          text-align: center;
+          font-size: 0.7em;
+          background-color: #6a1fa2;
+          border-radius: 50%;
+          color: white;
+        }
+        &__status{
+          margin-right: 0.2rem;
+        }
+      }
+    }
+
+
   }
-  &__description{
+
+  &__info {
+    padding: 0.5rem;
     display: flex;
-    justify-content: space-evenly;
-    font-size: 1.6rem;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+
+    .top {
+      display: flex;
+      justify-content: flex-start;
+
+      &__order {
+        margin: 0 1rem;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        line-height: 2rem;
+        background-color: #000;
+        color: #fff;
+        border-radius: 50%;
+      }
+
+      &__status {
+        flex: 0;
+        margin-left: 2rem;
+        width: 10rem;
+        height: 2rem;
+        padding: 0.2rem 0.4rem;
+        text-align: center;
+        border-radius: 4px;
+        background-color: #DC008F;
+        color: #fff;
+        font-size: 1.2rem;
+
+        &--Canceled {
+          background-color: #CD3247;
+        }
+
+        &--Confirmed {
+          background-color: #3A78FF;
+        }
+
+        &--New {
+          background-color: #DC008F;
+        }
+
+        &--Completed {
+          background-color: #4CA83D;
+        }
+      }
+
+      &__date {
+        margin-left: auto;
+        align-self: center;
+        font-size: 1.2rem;
+        color: #686565;
+      }
+    }
+
+    .bottom {
+      padding-top: 1rem;
+      display: flex;
+
+      &-left {
+        display: flex;
+        flex: 1;
+
+        &__priority {
+          align-self: flex-end;
+          margin-right: 1rem;
+          width: 5rem;
+        }
+
+        &__description {
+          flex: 1;
+        }
+      }
+    }
   }
 }

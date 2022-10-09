@@ -1,15 +1,29 @@
 <div class="card task">
   <div class="task__info">
-    <p>{{work_order_id}}</p>
+    <div class="top">
+      <p class="top__order">{{work_order_id}}</p>
+      <div class="top__status top__status--{{status}}"> {{status}}</div>
+      <div class="top__date"><p>{{received_date | date}}</p></div>
+    </div>
+    <div class="bottom">
+      <div class="bottom-left">
+        <div class="bottom-left__priority tooltip">{{priority | statusPipe}}
+          <span class="tooltiptext">{{priority}}</span>
+        </div>
+        <p class="bottom-left__description">{{description}}</p>
+      </div>
+      <div class="bottom-right">
 
-    <p>•</p>
-    <p> {{received_date}} </p>
-    <p *ngFor="let item of assigned_to"
-    >{{item.person_name}}</p>
-    <p> {{status}}</p>
-  </div>
-  <div class="task__description">
-    <p>{{priority}}</p>
-    <p>{{description}}</p>
+      </div>
+
+      <div class="task__assigned">
+        <div class="assigned-boxes" *ngFor="let item of assigned_to">
+          <div class="assigned-item__status tooltip">{{item.status | statusPipe}}
+            <span class="tooltiptext">{{item.status}}</span>
+          </div>
+          <p class="assigned-item__name">{{item.person_name | shortName}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
