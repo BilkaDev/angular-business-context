@@ -1,3 +1,10 @@
+
+
+
+run json-server:
+json-server --watch mocks/db.json --routes mocks/routes.json
+
+
 # AngularFs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
