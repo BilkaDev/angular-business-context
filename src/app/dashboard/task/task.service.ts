@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { TaskInterface } from "./task";
-import { ApiResponse } from "../interfaces/api";
+import { ApiResponse } from "../../interfaces/api";
 
 @Injectable({
   providedIn: "root"

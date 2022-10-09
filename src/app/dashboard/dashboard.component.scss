@@ -1,0 +1,28 @@
+.business-context {
+  margin: 30px auto;
+  width: 700px;
+  &__title {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    color: #DC008F;
+    border-bottom: 1px solid #DC008F;
+    h4 {
+      line-height: 3.5rem;
+      border-bottom: 2px solid #DC008F;
+    }
+  }
+  &__content {
+    padding: 0.5rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+.tasks {
+  width: 100%;
+  padding: 1rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #f4f5f7;
+}
