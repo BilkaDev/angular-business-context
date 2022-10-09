@@ -2,10 +2,16 @@
   <div class="business-context__title">
     <h4>BUSINESS CONTEXT</h4>
   </div>
+  <div class="form-group">
+    <label for="search-text">Search Text</label>
+    <input type="text" class="form-control" id="search-text" aria-describedby="search-text"
+           [(ngModel)]="searchText" placeholder="Search task"
+           autofocus>
+  </div>
   <div class="business-context__content">
     <div class="tasks">
       <ng-container *ngIf="(tasks$ | async) as tasks">
-        <app-task  *ngFor="let task of tasks.response.data"
+        <app-task  *ngFor="let task of tasks.response.data | appFilter: searchText"
                    [received_date]="task.received_date"
                    [work_order_id]="task.work_order_id"
                    [status]="task.status"

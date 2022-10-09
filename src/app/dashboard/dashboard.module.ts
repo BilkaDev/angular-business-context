@@ -4,17 +4,22 @@ import { TaskComponent } from "./task/task.component";
 import { DashboardComponent } from "./dashboard.component";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from "@angular/forms";
+
 
 
 @NgModule({
   declarations: [
     TaskComponent,
-    DashboardComponent
+    DashboardComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
     HttpClientModule,
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   exports: [
     DashboardComponent

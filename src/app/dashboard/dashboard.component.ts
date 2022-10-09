@@ -11,6 +11,7 @@ import { TaskService } from "./task/task.service";
 })
 export class DashboardComponent implements OnInit {
   public tasks$: Observable<ApiResponse<TaskInterface[]>> | undefined;
+  public searchText = '';
 
   constructor(private taskService: TaskService) {
   }
