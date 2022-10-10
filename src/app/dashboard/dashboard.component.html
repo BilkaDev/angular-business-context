@@ -8,14 +8,16 @@
   <div class="business-context__content">
     <div class="tasks">
       <ng-container *ngIf="(tasks$ | async) as tasks">
-        <app-task *ngFor="let task of tasks.response.data | appFilter: searchText"
-                  [received_date]="task.received_date"
-                  [work_order_id]="task.work_order_id"
-                  [status]="task.status"
-                  [priority]="task.priority"
-                  [assigned_to]="task.assigned_to"
-                  [description]="task.description"
-        ></app-task>
+        <ng-container *ngFor="let task of tasks.response.data | appFilter: searchText ; let i = index">
+          <app-task *ngIf="i < tasks.response.per_page"
+                    [received_date]="task.received_date"
+                    [work_order_id]="task.work_order_id"
+                    [status]="task.status"
+                    [priority]="task.priority"
+                    [assigned_to]="task.assigned_to"
+                    [description]="task.description"
+          ></app-task>
+        </ng-container>
         <div class="page-select">
           <div class="page-select__current">
             <div class="page-select__current-item"
