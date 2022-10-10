@@ -31,7 +31,7 @@ NodeJs,
 ## Tech Stack
 
 Angular V12.2.18,
-TypeAcript V4.3.5,
+TypeScript V4.3.5,
 json-server v0.17.0
 
 
