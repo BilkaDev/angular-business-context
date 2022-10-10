@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { ApiResponse } from "../interfaces/api";
-import { TaskInterface } from "./task/task";
+import { TaskResponseInterface } from "./task/task";
 import { TaskService } from "./task/task.service";
 
 @Component({
@@ -10,7 +10,7 @@ import { TaskService } from "./task/task.service";
   styleUrls: ["./dashboard.component.scss"]
 })
 export class DashboardComponent implements OnInit {
-  public tasks$: Observable<ApiResponse<TaskInterface[]>> | undefined;
+  public tasks$: Observable<ApiResponse<TaskResponseInterface>> | undefined;
   public searchText = '';
 
   constructor(private taskService: TaskService) {
