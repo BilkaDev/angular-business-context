@@ -1,21 +1,35 @@
 <div class="card business-context">
-<div class="business-context__bar">
-  <div class="business-context__title">
-    <h4>BUSINESS CONTEXT</h4>
-  </div>
+  <div class="business-context__bar">
+    <div class="business-context__title">
+      <h4>BUSINESS CONTEXT</h4>
+    </div>
     <app-search-task (searchEvent)=setSearchText($event)></app-search-task>
-</div>
+  </div>
   <div class="business-context__content">
     <div class="tasks">
       <ng-container *ngIf="(tasks$ | async) as tasks">
-        <app-task  *ngFor="let task of tasks.response.data | appFilter: searchText"
-                   [received_date]="task.received_date"
-                   [work_order_id]="task.work_order_id"
-                   [status]="task.status"
-                   [priority]="task.priority"
-                   [assigned_to]="task.assigned_to"
-                   [description]="task.description"
+        <app-task *ngFor="let task of tasks.response.data | appFilter: searchText"
+                  [received_date]="task.received_date"
+                  [work_order_id]="task.work_order_id"
+                  [status]="task.status"
+                  [priority]="task.priority"
+                  [assigned_to]="task.assigned_to"
+                  [description]="task.description"
         ></app-task>
+        <div class="page-select">
+          <div class="page-select__current">
+            <div class="page-select__current-item"
+                 *ngFor="let page of [].constructor(tasks.response.last_page);  let i = index"
+                 [class.page-select__current-item--active]="tasks.response.current_page === i + 1">
+              {{tasks.response.current_page}}
+            </div>
+          </div>
+          <select class="page-select__per" [value]="tasks.response.per_page">
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+        </div>
       </ng-container>
     </div>
   </div>
