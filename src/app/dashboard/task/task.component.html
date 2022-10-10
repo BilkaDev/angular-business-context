@@ -21,7 +21,9 @@
           <div class="assigned-item__status tooltip">{{item.status | statusPipe}}
             <span class="tooltiptext">{{item.status}}</span>
           </div>
-          <p class="assigned-item__name">{{item.person_name | shortName}}</p>
+          <div class="assigned-item__name tooltip">{{item.person_name | shortName}}
+            <span class="tooltiptext">{{item.person_name}}</span>
+          </div>
         </div>
       </div>
     </div>
