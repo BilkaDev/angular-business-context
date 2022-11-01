@@ -46,5 +46,5 @@ server: http://localhost:3000
 ```
 
 ## Screenshots
-![App Screenshot](https://bilkadev.networkmanager.pl/img/project/angular-business-table-f.png)
+![App Screenshot](https://bilka.networkmanager.pl/img/project/angular-business-table-f.png)
 
